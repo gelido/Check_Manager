@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tinker.studio.cheque_manager.MainActivity$PlaceholderFragment" >
+
+    <ListView
+        android:id="@+id/lv_entries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gridLayout2" >
+
+    </ListView>
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gridLayout2"
+        android:layout_alignParentTop="true"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="3" >
+
+        <Space />
+
+        <TextView
+            android:id="@+id/tv_show_total_value"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="1"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tv_show_positive_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="right|top"
+            android:layout_row="0"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tv_show_negative_value"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lv_entries"
+        android:layout_below="@+id/gridLayout1"
+        android:layout_marginTop="18dp"
+        android:columnCount="2" >
+
+        <Spinner
+            android:id="@+id/s_category_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|center_vertical"
+            android:layout_row="2" />
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal|fill"
+            android:layout_row="1"
+            android:gravity="left"
+            android:text="@string/filters"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/et_date_filter"
+            android:layout_width="143dp"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:layout_row="2"
+            android:ems="10"
+            android:inputType="date" >
+        </EditText>
+
+    </GridLayout>
+
+</RelativeLayout>

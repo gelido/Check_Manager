@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="446dp" >
+	
+	    <EditText
+	        android:id="@+id/et_create_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/tv_filter"
+	        android:layout_marginLeft="16dp"
+	        android:ems="10"
+	        android:inputType="numberDecimal|numberSigned" />
+	
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/et_create_value"
+	        android:layout_below="@+id/et_create_value"
+	        android:text="@string/tv_category" />
+	
+	    <TextView
+	        android:id="@+id/tv_filter"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/et_create_value"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="24dp"
+	        android:text="@string/tv_value" />
+	
+	    <Spinner
+	        android:id="@+id/s_create_category"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textView2"
+	        android:layout_below="@+id/textView2" />
+	
+	    <TextView
+	        android:id="@+id/textView3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/s_create_category"
+	        android:layout_below="@+id/s_create_category"
+	        android:text="@string/tv_date" />
+	
+	    <EditText
+	        android:id="@+id/et_create_date"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textView3"
+	        android:layout_below="@+id/textView3"
+	        android:ems="10"
+	        android:inputType="date" >
+	
+	    </EditText>
+	
+	    <CheckBox
+	        android:id="@+id/cb_create_isDone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/et_create_date"
+	        android:layout_below="@+id/et_create_date"
+	        android:layout_marginTop="17dp"
+	        android:text="@string/tv_isDone" />
+
+	    <EditText
+	        android:id="@+id/et_create_description"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/cb_create_isDone"
+	        android:layout_below="@+id/textView4"
+	        android:ems="10"
+	        android:inputType="textMultiLine"
+	       	android:hint="@string/optional" />
+
+	    <TextView
+	        android:id="@+id/textView4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/et_create_description"
+	        android:layout_below="@+id/cb_create_isDone"
+	        android:layout_marginTop="27dp"
+	        android:text="@string/tv_create_description" />
+
+	    <Button
+	        android:id="@+id/btn_save"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/et_create_description"
+	        android:text="@string/btn_save" />
+	
+	</RelativeLayout>
+</ScrollView>
